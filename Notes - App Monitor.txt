@@ -1,0 +1,54 @@
+docker pull influxdb:2.0.4-alpine
+docker pull grafana/grafana:7.5.2
+Info in Beschreibung dass diese Apps "for test only" sind. Daher default password. Bei Produktivverwendung: eigene container "pullen".
+
+
+http://nilhcem.com/iot/home-monitoring-with-mqtt-influxdb-grafana
+
+################### INFLUXDB ###################
+https://hub.docker.com/_/influxdb -> automated setup
+docker run -d --name=influxdb -p 8086:8086 -v influxdb2:/var/lib/influxdb2 influxdb:2.0.4-alpine
+docker run -d -p 8086:8086 -v $PWD/data:/var/lib/influxdb2 -v $PWD/config:/etc/influxdb2 -e DOCKER_INFLUXDB_INIT_MODE=setup -e DOCKER_INFLUXDB_INIT_USERNAME=my-user -e DOCKER_INFLUXDB_INIT_PASSWORD=my-password -e DOCKER_INFLUXDB_INIT_ORG=my-org -e DOCKER_INFLUXDB_INIT_BUCKET=my-bucket influxdb:2.0.4-alpine
+
+http://localhost:8086
+Username: mqtt2influx_app
+Password: X!rA69c6BqnnMDat
+Org: Lenze
+Bucket: app_com
+
+Bucket name: appmonitor_bucket -> retention policy makes sure data will be deleted after some time
+Advanced setup
+
+In admin mode: pip install influxdb-client
+https://influxdb-python.readthedocs.io/en/latest/api-documentation.html
+https://github.com/influxdata/influxdb-client-python
+https://github.com/influxdata/influxdb-python
+
+mosaiq_app_com
+
+json_body = [
+    {
+        "measurement": "actVelocity",
+        "tags": {
+            "protocol": "MQTT",
+            "source": topic
+        },
+        "time": "2009-11-10T23:00:00Z",
+        "fields": {
+            "value": 0.64
+        }
+    }
+]
+
+
+
+################### GRAFANA ###################
+https://grafana.com/docs/grafana/latest/administration/configure-docker/
+https://hub.docker.com/r/grafana/grafana
+https://grafana.com/docs/grafana/latest/installation/docker/
+docker run -d -p 3000:3000 --name=grafana grafana/grafana:7.5.2
+docker run -d -p 3000:3000 --name=grafana -v grafana-storage:/var/lib/grafana grafana/grafana:7.5.2
+
+password: mosaiq
+http://localhost:3000
+
