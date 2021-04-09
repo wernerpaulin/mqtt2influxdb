@@ -114,6 +114,7 @@ It also requires an influxdb app running on the Runtime or on a different host.
 | Container Port | Protocol | Description |
 | -------------- | -------- | ----------- |
 | n.a. | | |
+
 **Please note: Ports can be mapped to different host ports in the machine settings**
 
 <!-- DATA MANAGEMENT -->
