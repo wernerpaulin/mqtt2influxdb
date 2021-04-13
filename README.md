@@ -1,25 +1,26 @@
-# mqtt2influxdb
- Pushes MQTT topics and its values to an influxdb 
+# mqttscanner
+ Scans MQTT topics of a certain broker pushes it into a time series database.
  <br />
- Link to Repository: https://github.com/wernerpaulin/mqtt2influxdb
+ Link to Repository: https://github.com/wernerpaulin/mqttscanner
 
 <!-- APP SHIELDS -->
-[![GitHub issues](https://img.shields.io/github/issues/wernerpaulin/mqtt2influxdb)](https://github.com/wernerpaulin/mqtt2influxdb/issues)
-[![GitHub forks](https://img.shields.io/github/forks/wernerpaulin/mqtt2influxdb)](https://github.com/wernerpaulin/mqtt2influxdb/network)
-[![GitHub stars](https://img.shields.io/github/stars/wernerpaulin/mqtt2influxdb)](https://github.com/wernerpaulin/mqtt2influxdb/stargazers)
-[![GitHub license](https://img.shields.io/github/license/wernerpaulin/mqtt2influxdb)](https://github.com/wernerpaulin/mqtt2influxdb/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/wernerpaulin/mqttscanner)](https://github.com/wernerpaulin/mqttscanner/issues)
+[![GitHub forks](https://img.shields.io/github/forks/wernerpaulin/mqttscanner)](https://github.com/wernerpaulin/mqttscanner/network)
+[![GitHub stars](https://img.shields.io/github/stars/wernerpaulin/mqttscanner)](https://github.com/wernerpaulin/mqttscanner/stargazers)
+[![GitHub license](https://img.shields.io/github/license/wernerpaulin/mqttscanner)](https://github.com/wernerpaulin/mqttscanner/blob/main/LICENSE)
+
 
 <!-- APP LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/wernerpaulin/mqtt2influxdb">
+  <a href="https://github.com/wernerpaulin/mqttscanner">
     <img src="images/icon.png" alt="Logo" width="200" height="200">
   </a>
 
-  <h3 align="center">mqtt2influxdb</h3>
+  <h3 align="center">mqttscanner</h3>
 
   <p align="center">
-    This app is written in Python® 3. It subscribes to all MQTT topics of a defined broker and pushes them into influxdb.
+    This app is written in Python® 3. Scans MQTT topics of a certain broker and its values to an time series database built on InfluxDB®.
   </p>
 </p>
 
@@ -89,7 +90,7 @@
 | -------------- | ----------- |
 | [Python®](https://www.python.org/) | asyncio for concurrent execution of coroutines |
 | [Eclipse Paho®](https://www.eclipse.org/paho/) | MQTT client |
-| [Influexdb®](https://www.influxdata.com/) | Time series database |
+| [InfluxDB®](https://www.influxdata.com/) | Time series database |
 | [Docker®](https://www.docker.com/) | Container technology |
 
 
@@ -147,3 +148,4 @@ Mount points are access points to volumes (like paths) provided to the app to re
 * "Python®" and the Python logos are trademarks or registered trademarks of the Python Software Foundation.
 * "Eclipse®", "Mosquitto®", Paho® and the respective logos are trademarks or registered trademarks of the Eclipse Foundation.
 * "Docker®" and "Docker Hub®" are trademarks or registered trademarks of Docker.
+* "InfluxDB®" and the respective logo is a trademark or registered trademark by InfluxData, which is not affiliated with, and does not endorse, this product.
