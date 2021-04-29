@@ -67,21 +67,10 @@
      alt="Gallery 1" 
      style="float:left; margin-right: 10px;" 
      width="200"/>
-<img src="images/gallery2.png" 
-     alt="Gallery 2" 
-     style="float:left; margin-right: 10px;" 
-     width="200"/>
-<img src="images/gallery3.png" 
-     alt="Gallery 3" 
-     style="float:left; margin-right: 10px;" 
-     width="200"/>
-<img src="images/gallery4.png" 
-     alt="Gallery 4" 
-     style="float:left; margin-right: 10px;" 
-     width="200"/>
 
 ### Features
-* tbd...
+* automatically subscribes to all registered MQTT topics of a certain broker
+* transforms all topics to data items and pushes them into an InfluxDB time series data base
 
 
 

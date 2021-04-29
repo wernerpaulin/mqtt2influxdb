@@ -1,9 +1,12 @@
 #https://docs.docker.com/engine/reference/builder/
-#docker build --rm -t mqtt2influxdb:1.0.0 .
-#docker save -o mqtt2influxdb-1-0-0.tar mqtt2influxdb:1.0.0
-#docker run -d --rm --network host -e MQTT_BROKER_IP=192.168.1.100 -e MQTT_BROKER_PORT=1883 --name mqtt2influxdb-app mqtt2influxdb-img
-#docker logs mqtt2influxdb-app
-#docker container stop mqtt2influxdb-app
+#docker build --rm -t mqttscanner:1.0.0 .
+#docker save -o mqttscanner-1-0-0.tar mqttscanner:1.0.0
+#docker run -d --rm --network host -e MQTT_BROKER_IP=localhost -e MQTT_BROKER_PORT=1883 --name mqttscanner-app mqttscanner
+#docker run -d --rm -p 8086:8086 -v influxdb2:/var/lib/influxdb2 influxdb:2.0.4-alpine
+#docker run -d --rm -p 3000:3000 --name=grafana grafana/grafana:7.5.2
+
+#docker logs mqttscanner-app
+#docker container stop mqttscanner-app
 
 
 
